@@ -14,10 +14,18 @@ namespace FacebookApiWrapper.Web.Controllers
     {
         private static readonly Uri defaultUri = new Uri("swagger/ui/index.html", UriKind.Relative);
 
-        [Obsolete]
-        [Route("RegisterToken")]
-        public IHttpActionResult Post([FromBody]string accessToken)
+        public class TokenModel
         {
+          public string accessToken { get; set; }
+        }
+
+        [Obsolete]
+        [HttpPost]
+        [Route("RegisterToken")]
+        public IHttpActionResult Post(TokenModel model)
+        {
+          
+            
             return Ok(new
             {
                 Token = "asdasdsad",

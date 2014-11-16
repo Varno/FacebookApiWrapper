@@ -28,7 +28,8 @@
                     var form = document.createElement("form");
                     form.setAttribute("method", 'post');
                     form.setAttribute("action", '/api/RegisterToken');
-
+                    form.setAttribute("enctype", 'application/x-www-form-urlencoded');
+ 
                     var field = document.createElement("input");
                     field.setAttribute("type", "hidden");
                     field.setAttribute("name", 'accessToken');

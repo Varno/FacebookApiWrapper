@@ -10,7 +10,7 @@ namespace FacebookApiWrapper.Web.App_Start
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
                     name: "Default",
-                    routeTemplate: "{controller}",
+                    routeTemplate: @"{controller}",
                     defaults: new { controller = "home" }
                 );
             //var jsonFormatter = config.Formatters.JsonFormatter;
