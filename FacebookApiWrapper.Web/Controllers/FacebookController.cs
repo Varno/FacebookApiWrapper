@@ -24,6 +24,10 @@ namespace FacebookApiWrapper.Web.Controllers
             public string AccessToken { get; set; }
         }
 
+        public FacebookController()
+        {
+          int x = 1;
+        }
         /// <summary>
         /// Register facebook token on the server.
         /// </summary>

@@ -11,6 +11,9 @@ namespace FacebookApiWrapper.Web
 {
     public class Startup
     {
+      // http://www.asp.net/aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline
+
+
         public void Configuration(IAppBuilder app)
         {
             var config = new HttpConfiguration();
@@ -22,10 +25,10 @@ namespace FacebookApiWrapper.Web
             //    FileSystem = new PhysicalFileSystem(".\\public"),
             //    RequestPath = new PathString("/public"),
             //});
-            app.RequireAspNetSession();
-            app.UseWebApi(config);
-            // app.UseStageMarker(PipelineStage.MapHandler);
-            app.UseNancy();
+            app.RequireAspNetSession();  
+            app.UseWebApi(config);            
+            app.UseStageMarker(PipelineStage.MapHandler);
+            app.UseNancy();            
         }
     }
 }

@@ -8,11 +8,11 @@ namespace FacebookApiWrapper.Web.App_Start
         public static void Register(HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes();
-            config.Routes.MapHttpRoute(
-                    name: "Default",
-                    routeTemplate: @"{controller}",
-                    defaults: new { controller = "home" }
-                );
+            //config.Routes.MapHttpRoute(
+            //        name: "Default",
+            //        routeTemplate: @"{controller}",
+            //        defaults: new { controller = "home" }
+            //    );
             //var jsonFormatter = config.Formatters.JsonFormatter;
             //jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             //config.Formatters.Clear();
