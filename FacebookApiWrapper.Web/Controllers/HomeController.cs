@@ -3,14 +3,22 @@ using System.Web.Http;
 
 namespace FacebookApiWrapper.Web.Controllers
 {
-    public class HomeController : ApiController
+    public class HomeController : Nancy.NancyModule
     {
-        private static readonly Uri defaultUri = new Uri("/public/index.html", UriKind.Relative);
+        //private static readonly Uri defaultUri = new Uri("/public/index.html", UriKind.Relative);
 
-        [Obsolete]
-        public IHttpActionResult Get()
+        public HomeController()
         {
-            return Redirect(defaultUri);
+            Get["/"] = _ =>
+            {
+                var model = new { AppId = Properties.Settings.Default.FacebookAppId };
+                return View["index", model];
+            };
         }
+        //[Obsolete]
+        //public IHttpActionResult Get()
+        //{
+        //    return Redirect(defaultUri);
+        //}
     }
 }

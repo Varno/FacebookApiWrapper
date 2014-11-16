@@ -4,5 +4,28 @@
         <name>FacebookApiWrapper.Web</name>
     </assembly>
     <members>
+        <member name="T:FacebookApiWrapper.Web.Common.AspNetSessionExtensions">
+            <summary>
+            AspNetSessionExtensions
+            </summary>
+        </member>
+        <member name="M:FacebookApiWrapper.Web.Controllers.FacebookController.Post(FacebookApiWrapper.Web.Controllers.FacebookController.TokenModel)">
+            <summary>
+            Register facebook token on the server.
+            </summary>
+            <param name="model">Facebook access token model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FacebookApiWrapper.Web.Controllers.FacebookController.GetFriends">
+            <summary>
+            Get facebook friend list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FacebookApiWrapper.Web.Controllers.FacebookController.TokenModel">
+            <summary>
+            Token Model
+            </summary>
+        </member>
     </members>
 </doc>

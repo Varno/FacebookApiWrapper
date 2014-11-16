@@ -5,6 +5,7 @@ using Microsoft.Owin.FileSystems;
 using Microsoft.Owin.StaticFiles;
 using Owin;
 using System.Web.Http;
+using FacebookApiWrapper.Web.Common;
 
 namespace FacebookApiWrapper.Web
 {
@@ -16,13 +17,15 @@ namespace FacebookApiWrapper.Web
             SwaggerConfig.Register(config);
             WebApiConfig.Register(config);
 
-            app.UseFileServer(new FileServerOptions
-            {
-                FileSystem = new PhysicalFileSystem(".\\public"),
-                RequestPath = new PathString("/public"),
-            });
+            //app.UseFileServer(new FileServerOptions
+            //{
+            //    FileSystem = new PhysicalFileSystem(".\\public"),
+            //    RequestPath = new PathString("/public"),
+            //});
+            app.RequireAspNetSession();
             app.UseWebApi(config);
-            app.UseStageMarker(PipelineStage.MapHandler);
+            // app.UseStageMarker(PipelineStage.MapHandler);
+            app.UseNancy();
         }
     }
 }
