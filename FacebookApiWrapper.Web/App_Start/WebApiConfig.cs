@@ -13,10 +13,10 @@ namespace FacebookApiWrapper.Web.App_Start
                     routeTemplate: "{controller}",
                     defaults: new { controller = "home" }
                 );
-            var jsonFormatter = config.Formatters.JsonFormatter;
-            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            config.Formatters.Clear();
-            config.Formatters.Add(jsonFormatter);
+            //var jsonFormatter = config.Formatters.JsonFormatter;
+            //jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            //config.Formatters.Clear();
+            //config.Formatters.Add(jsonFormatter);
         }
     }
 }
